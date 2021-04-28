@@ -2616,11 +2616,11 @@ typedef CL_API_ENTRY cl_int (CL_API_CALL *clGetGLContextInfoKHR_fn)(
 #  define CLEWAPI extern
 #endif
 
-//#if defined(_WIN32)
-//#define CLEW_FUN_EXPORT extern
-//#else
+#if defined(_WIN32)
+#define CLEW_FUN_EXPORT extern
+#else
 #define CLEW_FUN_EXPORT CLEWAPI
-//#endif
+#endif
 
 #define CLEW_GET_FUN(x) x
 
